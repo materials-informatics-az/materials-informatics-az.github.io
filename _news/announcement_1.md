@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+PI Latypov co-organized the first MateriAlZ Winter School held in Biosphere 2. 
