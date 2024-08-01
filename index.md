@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Materials Informatics Lab at University of Arizona"
+title: "Materials Informatics Lab, AZ"
 ---
 
 
