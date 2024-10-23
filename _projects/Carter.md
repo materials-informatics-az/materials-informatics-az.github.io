@@ -6,7 +6,7 @@ img: assets/img/carter.jpg
 category: undergraduate researchers 
 ---
 
-Carter Pettid is a Computer Science and Statitics student with an interest in material properties and microstructure. He is currently working on the application of deep learning to predict material properties. In his free time he develops financial algorithms.
+Carter Pettid is a student in Computer Science and Statitics with interests in computational materials science and materials informatics. He is currently working on the application of deep learning for modeling materials properties. In his free time, Carter develops financial algorithms.
 
 ### Education
 
@@ -29,14 +29,11 @@ Carter Pettid is a Computer Science and Statitics student with an interest in ma
 
 ### Research interests
 
-- Applying Deep Learning to understand and predict Material Properties
-- Material Failure Mechanisms
-- Market Microstructure
+- Deep learning
+- Microstructure--property relationships
+- Market microstructure
 
-<CAN ADD ANY OTHER NEW SECTIONS YOU WOULD LIKE>
+### Contact
 
-### Contacts -- OPTIONAL, REMOVE IF YOU WOULD PREFER NOT TO SHARE YOUR CONTACT INFO
-
-- Personal Email: carter.pettid@gmail.com
-- Student Email: carterpettid@arizona.edu
+- Email: carterpettid@arizona.edu
 - Links: [LinkedIn](https://www.linkedin.com/in/carter-pettid-49998223a/)
