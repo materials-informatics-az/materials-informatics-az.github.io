@@ -18,6 +18,18 @@ Guangyu Hu is a graduate student in Materials Science and Engineering at the Uni
             <td>University of Arizona</td>
             <td align ="right">Tucson, AZ</td>
         </tr>
+        <tr>
+            <th scope="row">2021-2023</th>
+            <td>Minor in Computer Science</td>
+            <td>University of Arizona</td>
+            <td align ="right">Tucson, AZ</td>
+        </tr>
+        <tr>
+            <th scope="row">2017-2019</th>
+            <td>M.S. in Materials Science</td>
+            <td>Rensselaer Polytechnic Institute</td>
+            <td align ="right">Troy, NY</td>
+        </tr>
     </table>
 </div>
 
