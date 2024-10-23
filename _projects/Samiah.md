@@ -4,7 +4,6 @@ title: Samiah Hassan
 description: Materials Science and Engineering
 img: assets/img/samiah.jpg
 category: graduate researchers
-giscus_comments: false
 ---
 
 Samiah Hassan is a Master's student in the Department of Materials Science & Engineering. Samiah works on computational modeling of materials to enable new technologies. Outside of research, Samiah enjoys traveling.
@@ -22,7 +21,7 @@ Samiah Hassan is a Master's student in the Department of Materials Science & Eng
         <tr>
             <th scope="row">{{2020}}</th>
             <td>B.S. in Nuclear Science and Engineering</td>
-            <td>Military Institute of Science & Technology/td>
+            <td>Military Institute of Science & Technology</td>
             <td align ="right">Dhaka, Bangladesh</td>
         </tr>
     </table>
