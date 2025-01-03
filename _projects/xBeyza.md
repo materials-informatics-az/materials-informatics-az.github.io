@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Nimet Beyza Bozdag
-description: UIUC
+title: Beyza Bozdag
+description: Computer Science
 img: assets/img/profile.jpg
 category: alumni & past members
 ---

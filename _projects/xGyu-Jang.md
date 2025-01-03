@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gyu-Jang Sim
-description: Seoul National University
+description: Visiting student
 img: assets/img/profile.jpg
 category: alumni & past members
 ---

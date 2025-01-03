@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tugay Bilgis
-description: Microsoft
+description: Computer Science
 img: assets/img/profile.jpg
 category: alumni & past members
 ---
