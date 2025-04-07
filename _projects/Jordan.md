@@ -6,4 +6,4 @@ img: assets/img/profile.jpg
 category: undergraduate researchers 
 ---
 
-Jordan is a sophomore in Mechanical Engineering interested in sustainable materials and robotics. At MIL, Tommy is working on experimental research of sustainable aluminum alloys. 
+Jordan is a sophomore in Mechanical Engineering interested in sustainable materials and robotics. At MIL, Jordan is working on experimental research of sustainable aluminum alloys. 
