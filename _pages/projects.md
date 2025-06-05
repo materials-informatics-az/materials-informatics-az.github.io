@@ -12,8 +12,8 @@ images:
 --- 
 
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_f2024.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_s2024.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_f2024.jpg" class="img-fluid rounded" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_s2024.jpg" class="img-fluid rounded" %}</swiper-slide>
 </swiper-container>
 
 <!-- pages/projects.md -->
