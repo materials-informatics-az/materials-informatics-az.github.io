@@ -18,17 +18,12 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+          description: "at the University of Arizona",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-guangyu-presents-graph-neural-networks-for-polycrystals-at-the-machine-learning-and-simulations-seesion-of-the-mrs-spring-meeting-in-seattle-wa",
+        },{id: "news-guangyu-presents-graph-neural-networks-for-polycrystals-at-the-machine-learning-and-simulations-seesion-of-the-mrs-spring-meeting-in-seattle-wa",
           title: 'Guangyu presents graph neural networks for polycrystals at the Machine Learning and Simulations...',
           description: "",
           section: "News",},{id: "news-a-new-preprint-on-modeling-fatigue-indicators-parameters-with-graph-neural-networks-is-live-on-arxiv",
