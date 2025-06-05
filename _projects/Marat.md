@@ -36,6 +36,7 @@ Dr. Marat Latypov is an assistant professor in Materials Science and Engineering
 
 ### Honors and awards 
 
+- **2025**: NSF CAREER Award
 - **2024**: ISTI Distinguished Faculty Scholar at Los Alamos National Laboratory
 - **2023**: UofA President's nominee for Packard Fellowhsip
 - **2021** First prize in Novelis computer vision hackathon
