@@ -13,19 +13,19 @@ Jiayang Wang is a postdocdtoral research associate in the Depatment of Materials
 <div class="table-responsive">
     <table class="table table-sm table-borderless">
         <tr>
-            <th scope="row">{{2020-2024}}</th>
+            <th scope="row">{{2024}}</th>
             <td>Ph.D. in Material Science and Engineering</td>
             <td>Penn State University</td>
             <td align ="right">State College, PA</td>
         </tr>
         <tr>
-            <th scope="row">{{2018-2020}}</th>
+            <th scope="row">{{2020}}</th>
             <td>M.S. in Material Science and Engineering</td>
             <td>Columbia University</td>
             <td align ="right">New York, NY</td>
         </tr>
         <tr>
-            <th scope="row">{{2014-2018}}</th>
+            <th scope="row">{{2018}}</th>
             <td>B.S. in Material Science and Engineering</td>
             <td>Southeast University</td>
             <td align ="right">Nanjing, China</td>
