@@ -7,7 +7,14 @@ nav: true
 nav_order: 3
 display_categories: [principal investigator, postdocs, graduate researchers, undergraduate researchers, alumni]
 horizontal: false
----
+images: 
+  slider: true
+--- 
+
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_f2024.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_s2024.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+</swiper-container>
 
 <!-- pages/projects.md -->
 <div class="projects">
