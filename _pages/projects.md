@@ -63,3 +63,31 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+
+
+<div class="projects">
+  <!-- Display categorized projects -->
+  <a id=past>
+    <h2 class="category">past members</h2>
+  </a>
+</div>
+
+## Undergraduate researchers
+
+- Skyler DeVaughn (Software Engineering)
+- Carter Pettid (Computer Science, Statistics)
+- Nimet Beyza Bozdag (Computer Science, Mathematics)
+- Tugay Bilgis (Computer Science, Mathematics)
+- Thompson Nguyen (Computer Science)
+
+## Short-term graduate researchers
+
+- Saege Hagerty (Materials Science & Engineering)
+- Aditya Jain (Management & Information Systems)
+- Hao Qin (Statistics & Data Science)
+- Eric Chirtel (Applied Math)
+- Akshita Sharma (Applied Math)
+
+## Visitors
+
+- Gyu-Jang Sim (Seoul National University)
