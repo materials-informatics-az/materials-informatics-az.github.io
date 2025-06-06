@@ -96,7 +96,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-guangyu-hu",
           title: 'Guangyu Hu',
-          description: "Materials Science and Engineering",
+          description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Guangyu/";
             },},{id: "projects-i-tzu-huang",
@@ -106,7 +106,7 @@ ninja.data = [{
               window.location.href = "/projects/I-Tzu/";
             },},{id: "projects-jiayang-wang",
           title: 'Jiayang Wang',
-          description: "Materials Science and Engineering",
+          description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Jiayang/";
             },},{id: "projects-jordan-casto",
@@ -126,7 +126,7 @@ ninja.data = [{
               window.location.href = "/projects/Sheila/";
             },},{id: "projects-thomas-tawiah-baah",
           title: 'Thomas Tawiah Baah',
-          description: "Materials Science and Engineering",
+          description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Thomas/";
             },},{id: "projects-tommy-dracopoulos",
@@ -136,7 +136,7 @@ ninja.data = [{
               window.location.href = "/projects/Tommy/";
             },},{id: "projects-samiah-hassan",
           title: 'Samiah Hassan',
-          description: "M.S. thesis research",
+          description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/xSamiah/";
             },},{
