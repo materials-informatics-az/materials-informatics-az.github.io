@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Thomas Tawiah Baah
-description: Materials Science and Engineering
+description: Materials Science & Engineering
 img: assets/img/pics/thomas.jpg
 category: graduate researchers
 giscus_comments: false
 ---
 
-Thomas Tawiah Baah is a second year PhD student in the Department of Materials Science and Engineering. Thomas's research combines materials science and civil engineering to develop sustainable, high-performance materials like concrete, using computational methods for future infrastructure. 
+Thomas Tawiah Baah is a second year PhD student in the Department of Materials Science & Engineering. Thomas's research combines materials science and civil engineering to develop sustainable, high-performance materials like concrete, using computational methods for future infrastructure. 
 
 ### Education
 
@@ -15,7 +15,7 @@ Thomas Tawiah Baah is a second year PhD student in the Department of Materials S
     <table class="table table-sm table-borderless">
         <tr>
             <th scope="row">~2028</th>
-            <td>Ph.D. in Materials Science and Engineering</td>
+            <td>Ph.D. in Materials Science & Engineering</td>
             <td>University of Arizona</td>
             <td align ="right">Tucson, AZ</td>
         </tr>

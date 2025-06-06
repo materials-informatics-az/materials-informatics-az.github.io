@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Guangyu Hu
-description: Materials Science and Engineering
+description: Materials Science & Engineering
 img: assets/img/pics/guangyu.jpg
 category: graduate researchers
 ---
@@ -14,7 +14,7 @@ Guangyu Hu is a PhD candidate in Materials Science & Engineering at the Universi
     <table class="table table-sm table-borderless">
         <tr>
             <th scope="row">~2025</th>
-            <td>Ph.D. in Materials Science, minor in Computer Science</td>
+            <td>Ph.D. in MSE, minor in Computer Science</td>
             <td>University of Arizona</td>
             <td align ="right">Tucson, AZ</td>
         </tr>

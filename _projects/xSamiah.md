@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Samiah Hassan
-description: M.S. thesis research
+description: Materials Science & Engineering
 img: assets/img/pics/samiah.jpg
 category: alumni
 ---
@@ -14,13 +14,13 @@ Samiah Hassan pursued a Master's degree in the Department of Materials Science &
     <table class="table table-sm table-borderless">
         <tr>
             <th scope="row">2025</th>
-            <td>M.S. in Materials Science and Engineering</td>
+            <td>M.S. in Materials Science & Engineering</td>
             <td>University of Arizona</td>
             <td align ="right">Tucson, AZ</td>
         </tr>
         <tr>
             <th scope="row">{{2020}}</th>
-            <td>B.S. in Nuclear Science and Engineering</td>
+            <td>B.S. in Nuclear Science & Engineering</td>
             <td>Military Institute of Science & Technology</td>
             <td align ="right">Dhaka, Bangladesh</td>
         </tr>
