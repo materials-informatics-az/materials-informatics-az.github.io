@@ -100,6 +100,18 @@ ninja.data = [{
           section: "News",},{id: "news-our-work-on-microstructure-representation-with-vision-transformers-is-now-published-in-acta-materialia-the-full-text-is-also-available-on-arxiv",
           title: 'Our work on microstructure representation with vision transformers is now published in Acta...',
           description: "",
+          section: "News",},{id: "news-thomas-attends-codas-hep-a-summer-school-on-computational-and-data-science-for-high-energy-physics-at-princeton-university",
+          title: 'Thomas attends CODAS-HEP, a summer school on computational and data science for high...',
+          description: "",
+          section: "News",},{id: "news-marat-presents-graph-neural-networks-for-polycrystals-at-the-us-congress-on-computational-mechanics-usnccm18",
+          title: 'Marat presents graph neural networks for polycrystals at the US Congress on Computational...',
+          description: "",
+          section: "News",},{id: "news-mil-is-part-of-a-new-project-on-enhancing-chalcopyrite-leaching-in-copper-mining-funded-by-the-grantham-foundation",
+          title: 'MIL is part of a new project on enhancing chalcopyrite leaching in copper...',
+          description: "",
+          section: "News",},{id: "news-zhuocheng-leo-huang-joins-the-group-as-a-phd-student-and-herbold-fellow-welcome",
+          title: 'Zhuocheng (Leo) Huang joins the group as a PhD student and Herbold Fellow....',
+          description: "",
           section: "News",},{id: "projects-guangyu-hu",
           title: 'Guangyu Hu',
           description: "Materials Science &amp; Engineering",
@@ -115,11 +127,6 @@ ninja.data = [{
           description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Jiayang/";
-            },},{id: "projects-jordan-casto",
-          title: 'Jordan Casto',
-          description: "Mechanical Engineering",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Jordan/";
             },},{id: "projects-marat-latypov",
           title: 'Marat Latypov',
           description: "MSE and Applied Mathematics",
@@ -145,6 +152,11 @@ ninja.data = [{
           description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/xSamiah/";
+            },},{id: "projects-zhuocheng-leo-huang",
+          title: 'Zhuocheng (Leo) Huang',
+          description: "Materials Science &amp; Engineering",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/zhuocheng/";
             },},{
         id: 'social-email',
         title: 'email',
