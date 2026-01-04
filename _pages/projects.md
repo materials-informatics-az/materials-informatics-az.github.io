@@ -12,6 +12,7 @@ images:
 --- 
 
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_f2025.jpg" class="img-fluid rounded" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_f2024.jpg" class="img-fluid rounded" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/group/group_s2024.jpg" class="img-fluid rounded" %}</swiper-slide>
 </swiper-container>
@@ -89,6 +90,7 @@ images:
 
 ## Short-term graduate researchers
 
+- John Cohen (Applied Math)
 - Saege Hagerty (Materials Science & Engineering)
 - Aditya Jain (Management & Information Systems)
 - Hao Qin (Statistics & Data Science)
