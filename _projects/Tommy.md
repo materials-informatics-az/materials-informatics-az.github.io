@@ -2,7 +2,7 @@
 layout: page
 title:  Adam Dracopoulos
 description: Mechanical Engineering
-img: assets/img/pics/adam.png
+img: assets/img/pics/adam.jpg
 category: undergraduate researchers 
 ---
 

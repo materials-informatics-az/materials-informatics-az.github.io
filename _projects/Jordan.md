@@ -2,7 +2,7 @@
 layout: page
 title:  Jordan Casto
 description: Mechanical Engineering
-img: assets/img/pics/jordan.png
+img: assets/img/pics/jordan.jpg
 category: undergraduate researchers 
 ---
 
