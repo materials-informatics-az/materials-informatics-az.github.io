@@ -1,9 +1,14 @@
 ---
 layout: page
-title:  Tommy Dracopoulos
+title:  Adam Dracopoulos
 description: Mechanical Engineering
-img: assets/img/profile.jpg
+img: assets/img/pics/adam.png
 category: undergraduate researchers 
 ---
 
-Tommy is a first-year Mechanical Engineering student interested in materials research. At MIL, Tommy is working on experimental research of sustainable aluminum alloys. 
+Adam is a Mechanical Engineering student. At MIL, Adam is working on experimental characterization sustainable aluminum alloys. Outside of research, Adam plays music and races. 
+
+### Contact
+
+- Email: adamdracopoulos@arizona.edu
+- Links: [LinkedIn](https://www.linkedin.com/in/adam-dracopoulos-67718725a)

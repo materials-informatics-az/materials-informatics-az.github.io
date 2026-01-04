@@ -1,19 +1,25 @@
 ---
 layout: page
 title: I-Tzu Huang
-description: Physics
+description: Materials Science & Engineering
 img: assets/img/pics/itzu.jpg
-category: undergraduate researchers
+category: graduate researchers
 ---
 
-I-Tzu Huang is a Physics undergraduate at the University of Arizona with interests in machine learning and particle physics. I-Tzu is currently engaged in research for the ATLAS experiment at CERN as well as topological acoustics as part of the NSF Center for [New Frontiers of Sound](https://newfos.arizona.edu/).
+I-Tzu Huang is a PhD student in the Department of Materials Science & Engineering. I-Tzu's research interest is physics-informed machine learning for cross-disciplinary applications ranging from micromechanics of materials to environmental sensing.
 
 ### Education
 
 <div class="table-responsive">
     <table class="table table-sm table-borderless">
         <tr>
-            <th scope="row">~2026</th>
+            <th scope="row">~2029</th>
+            <td>Ph.D. in Materials Science & Engineering</td>
+            <td>University of Arizona</td>
+            <td align ="right">Tucson, AZ</td>
+        </tr>
+        <tr>
+            <th scope="row">2025</th>
             <td>B.S. in Physics</td>
             <td>University of Arizona</td>
             <td align ="right">Tucson, AZ</td>
@@ -23,9 +29,9 @@ I-Tzu Huang is a Physics undergraduate at the University of Arizona with interes
 
 ### Research interests
 
-- Machine Learning in particle physics
-- Remote environmental sensing
-- Topological acoustics and wave modeling
+- Physics-informed machine learning
+- Remote environmental sensing and topological acoustics
+- Microstructure and micromechanics
 
 ### Honors and awards 
 
