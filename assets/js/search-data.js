@@ -118,6 +118,18 @@ ninja.data = [{
           section: "News",},{id: "news-our-manuscript-on-chord-length-distribution-for-description-of-gradient-and-other-non-uniform-microstructures-is-published-in-metallurgical-and-materials-transactions-a",
           title: 'Our manuscript on chord length distribution for description of gradient and other non-uniform...',
           description: "",
+          section: "News",},{id: "news-marat-gives-an-invited-talk-at-the-materials-informatics-session-of-the-ms-amp-amp-t-2025-conference",
+          title: 'Marat gives an invited talk at the Materials Informatics session of the MS&amp;amp;amp;T-2025...',
+          description: "",
+          section: "News",},{id: "news-ramya-ramachandran-from-computer-science-joins-the-group-as-a-graduate-research-assistant-welcome",
+          title: 'Ramya Ramachandran from Computer Science joins the group as a graduate research assistant....',
+          description: "",
+          section: "News",},{id: "news-sheila-presents-microstructure-representation-with-transformers-los-alamos-arizona-days-conference-held-at-lanl",
+          title: 'Sheila presents microstructure representation with transformers Los Alamos Arizona Days Conference held at...',
+          description: "",
+          section: "News",},{id: "news-i-tzu-graduates-with-a-bachelor-of-science-in-physics-congratulations",
+          title: 'I-Tzu graduates with a Bachelor of Science in Physics. Congratulations!',
+          description: "",
           section: "News",},{id: "projects-guangyu-hu",
           title: 'Guangyu Hu',
           description: "Materials Science &amp; Engineering",
@@ -125,7 +137,7 @@ ninja.data = [{
               window.location.href = "/projects/Guangyu/";
             },},{id: "projects-i-tzu-huang",
           title: 'I-Tzu Huang',
-          description: "Physics",
+          description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/I-Tzu/";
             },},{id: "projects-jiayang-wang",
@@ -133,11 +145,21 @@ ninja.data = [{
           description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Jiayang/";
+            },},{id: "projects-jordan-casto",
+          title: 'Jordan Casto',
+          description: "Mechanical Engineering",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Jordan/";
             },},{id: "projects-marat-latypov",
           title: 'Marat Latypov',
           description: "MSE and Applied Mathematics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Marat/";
+            },},{id: "projects-ramya-ramachandran",
+          title: 'Ramya Ramachandran',
+          description: "Computer Science",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Ramya/";
             },},{id: "projects-sheila-whitman",
           title: 'Sheila Whitman',
           description: "Applied Mathematics",
@@ -148,8 +170,8 @@ ninja.data = [{
           description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Thomas/";
-            },},{id: "projects-tommy-dracopoulos",
-          title: 'Tommy Dracopoulos',
+            },},{id: "projects-adam-dracopoulos",
+          title: 'Adam Dracopoulos',
           description: "Mechanical Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Tommy/";
