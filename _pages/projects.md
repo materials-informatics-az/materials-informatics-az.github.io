@@ -82,6 +82,7 @@ images:
 
 ## Undergraduate researchers
 
+- Adam Dracopoulos (Aerospace & Mechanical Engineering)
 - Skyler DeVaughn (Software Engineering)
 - Carter Pettid (Computer Science, Statistics)
 - Nimet Beyza Bozdag (Computer Science, Mathematics)
