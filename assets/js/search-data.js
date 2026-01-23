@@ -130,6 +130,12 @@ ninja.data = [{
           section: "News",},{id: "news-i-tzu-graduates-with-a-bachelor-of-science-in-physics-congratulations",
           title: 'I-Tzu graduates with a Bachelor of Science in Physics. Congratulations!',
           description: "",
+          section: "News",},{id: "news-zhuocheng-i-tzu-and-marat-present-topological-acoustics-software-and-environmental-sensing-at-newfos-stakeholder-meeting",
+          title: 'Zhuocheng, I-Tzu, and Marat present topological acoustics software and environmental sensing at NewFos...',
+          description: "",
+          section: "News",},{id: "news-a-new-preprint-on-thermodynamic-assessment-of-two-chalcogenide-systems-in-now-on-arxiv",
+          title: 'A new preprint on thermodynamic assessment of two chalcogenide systems in now on...',
+          description: "",
           section: "News",},{id: "projects-guangyu-hu",
           title: 'Guangyu Hu',
           description: "Materials Science &amp; Engineering",
@@ -170,11 +176,6 @@ ninja.data = [{
           description: "Materials Science &amp; Engineering",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Thomas/";
-            },},{id: "projects-adam-dracopoulos",
-          title: 'Adam Dracopoulos',
-          description: "Mechanical Engineering",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Tommy/";
             },},{id: "projects-samiah-hassan",
           title: 'Samiah Hassan',
           description: "Materials Science &amp; Engineering",
