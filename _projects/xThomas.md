@@ -3,7 +3,7 @@ layout: page
 title: Thomas Tawiah Baah
 description: Materials Science & Engineering
 img: assets/img/pics/thomas.jpg
-category: graduate researchers
+category: alumni
 giscus_comments: false
 ---
 

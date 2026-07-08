@@ -35,6 +35,7 @@ I-Tzu Huang is a PhD student in the Department of Materials Science & Engineerin
 
 ### Honors and awards 
 
+- **Apr 2026**: NSF Graduate Research Fellowship
 - **May 2024**: US ATLAS Summer Undergraduate Program for Exceptional Researchers
 - **Oct 2023**: Highest Academic Distinction at the University of Arizona
 
