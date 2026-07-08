@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: at the <a href='https://mse.engineering.arizona.edu/'>University of Arizona</a> (Tucson, AZ) 
+subtitle: for the imperfect alloys that carry the load 
 
 profile:
   align: right
-  image: logo.svg
+  image: 
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
@@ -19,20 +19,17 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 6 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-#### Welcome!
+<h1>Making the mesoscale computable</h1>
+<h2>for the imperfect materials that carry the load</h2>
 
-Welcome to the Materials Informatics Lab at the University of Arizona! We are an interdisciplinary group advancing the field of _structural_ materials infomatics for accelerated design and development of sustainable structural alloys. 
+<br> Materials informatics has mastered atomistic discovery but an alloy is more than its unit cell. Strength, fatigue, and damage are decided at the mesoscale of grains, phases, and defects. **We measure, model, and design the mesoscale.**
 
-#### Our expertise and capabilities
-
-- Metallurgy and mechanics of structural alloys
-- Machine learning: deep learning, Bayesian inference, language models
-- High-performance computing: algorithms, numerical methods, cloud computing
+Real materials and signals are imperfect: unpredictable compositions of recycled streams, micrographs resisting segmentation. We represent microscopy as continuous fields and descriptions that tolerate noise and **design microstructure where composition is not free to choose.**
