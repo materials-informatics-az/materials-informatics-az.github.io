@@ -181,6 +181,34 @@ ul.task-list input[type="checkbox"] {
   .card-body {
     padding: 1.25rem 1.25rem 1.25rem 1.25rem;
   }
+
+  // Uniform image height for member cards and research-thrust tiles.
+  // Tune `height` to taste; `object-position` shifts the crop (e.g. `top` to keep faces).
+  figure {
+    margin-bottom: 0;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// Landing page: hero banner + research thrusts
+.hero-banner {
+  margin: 2rem 0;
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 6;
+    object-fit: cover;
+  }
+}
+
+.thrusts {
+  margin: 2rem 0;
 }
 
 // Citation
