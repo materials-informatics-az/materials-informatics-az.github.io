@@ -27,9 +27,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<h1>Making the mesoscale computable</h1>
-<h2>for the imperfect materials that carry the load</h2>
+<h1>Understanding the mesoscale </h1>
+<h2>of imperfect materials that carry the load</h2>
 
-<br> Materials informatics has mastered atomistic discovery but an alloy is more than its unit cell. Strength, fatigue, and damage are decided at the mesoscale of grains, phases, and defects. **We measure, model, and design the mesoscale.**
+<br> Materials informatics has mastered atomistic discovery but an alloy is not its unit cell. Strength, fatigue, and damage are decided at the mesoscale of grains, phases, and defects. **We measure, model, and design the mesoscale.**
 
-Real materials and signals are imperfect: unpredictable compositions of recycled streams, micrographs resisting segmentation. We represent microscopy as continuous fields and descriptions that tolerate noise and **design microstructure where composition is not free to choose.**
+In the age of vulnerable supply chains and need in circular materials, our philosophy is to **design microstructure where composition is not free to choose.**
