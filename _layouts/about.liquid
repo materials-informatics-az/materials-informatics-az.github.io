@@ -34,6 +34,9 @@ layout: default
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
+      <p class="news-more text-right">
+        <a href="{{ '/news/' | relative_url }}">all news &rarr;</a>
+      </p>
     {% endif %}
 
     <!-- Latest posts -->
