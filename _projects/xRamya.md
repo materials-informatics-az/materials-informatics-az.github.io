@@ -3,7 +3,7 @@ layout: page
 title: Ramya Ramachandran
 description: Computer Science
 img: assets/img/pics/ramya.jpg
-category: alumni
+category: graduate researchers
 giscus_comments: false
 ---
 
