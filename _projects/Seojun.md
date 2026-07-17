@@ -2,11 +2,11 @@
 layout: page
 title: Seojun Hong
 description: Materials Science & Engineering
-img: assets/img/profile.jpg
+img: assets/img/pics/seojun.jpg
 category: postdocs
 ---
 
-Seojun Hong is a postdocdtoral research associate in the Depatment of Materials Science & Engineering and the NSF Center for [New Frontiers of Sound](https://newfos.arizona.edu/). Jiayang is working on finite element models. 
+Dr. Seojun Hong is a postdoctoral research associate in the Depatment of Materials Science & Engineering and the NSF Center for [New Frontiers of Sound](https://newfos.arizona.edu/). Seojun is currently workong on finite element modeling across length scales. 
 
 ### Education
 
