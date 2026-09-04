@@ -1,0 +1,96 @@
+# ---------------------------------------------------------------------------
+# Site-wide settings. This file and its siblings in content/ are the only
+# things we regularly edit.
+# ---------------------------------------------------------------------------
+
+title: Materials Informatics Lab
+tagline: Understanding the mesoscale of imperfect materials that carry the load
+institution: University of Arizona
+# Optional. Blank it or delete the line and it simply disappears from the footer
+# — the separators close up rather than leaving a stray dot.
+department:
+location: Tucson, AZ
+founded: 2021
+
+# Used for canonical links, sitemap.xml and Open Graph tags. No trailing slash.
+# Leave it blank and none of those are emitted.
+url: https://materials-informatics-az.github.io
+
+# ---------------------------------------------------------------------------
+# Analytics. Set one, or neither — whatever is set here is the ONLY third-party
+# script the site loads besides Google Fonts. notes/NOTES.md has the comparison;
+# the short version is that GoatCounter suits this site better.
+# ---------------------------------------------------------------------------
+
+analytics:
+  # GoatCounter: sign up at goatcounter.com, then put your site CODE here — just
+  # the code, so "mylab", not "https://mylab.goatcounter.com".
+  goatcounter:
+
+  # Google Analytics 4 measurement ID, carried over from the al-folio site.
+  # Blank this when you switch; running both double-counts every visit and puts
+  # the cookie-banner question back on the table.
+  google: G-69JF3DB2YR
+
+# ---------------------------------------------------------------------------
+# Feature flags. Flip one line to add or remove a whole section of the site:
+# the page stops being built, its nav item disappears, and any block on another
+# page that depends on it is skipped.
+# ---------------------------------------------------------------------------
+features:
+  research: false # research.html + the pillar cards on the landing page
+  tools: false # tools.html + the featured-tool band + "Interactive" chips on papers
+  studies: false # blog index, per-post pages, feed.xml
+  teaching: false
+  cv: false
+
+# ---------------------------------------------------------------------------
+# How much of each list the landing page shows. The full lists live on their
+# own pages; these are the teasers.
+# ---------------------------------------------------------------------------
+landing:
+  news_count: 4
+  pillar_count: 3 # how many pillars the landing page shows. The research page
+                  # always shows all of them. Leave blank to show every one.
+  tool_rows: 3 # the featured tool always comes first
+  tools_band: false # the "Run the science in your browser" band on the landing
+                   # page. Turn this off to drop the band while keeping
+                   # tools.html and the nav entry.
+
+# ---------------------------------------------------------------------------
+# Navigation. `flag` ties an item to features above; omit it for always-on items.
+# ---------------------------------------------------------------------------
+nav:
+  - { label: Research, href: research.html, flag: research }
+  - { label: Tools, href: tools.html, flag: tools }
+  - { label: People, href: people.html }
+  - { label: Publications, href: publications.html }
+  - { label: Studies, href: studies.html, flag: studies }
+  - { label: News, href: news.html }
+
+footer_nav:
+  - { label: Teaching, href: teaching.html, flag: teaching }
+  - { label: CV, href: cv.html, flag: cv }
+
+socials:
+  - { label: Scholar, href: "https://scholar.google.com/citations?user=We5aJywAAAAJ" }
+  - { label: GitHub, href: "https://github.com/materials-informatics-az" }
+
+# ---------------------------------------------------------------------------
+# Newsletter — the "Stay in touch" band at the foot of the landing page.
+# `enabled: false` removes the whole band; nothing else on the page moves.
+# ---------------------------------------------------------------------------
+newsletter:
+  enabled: false
+  endpoint: # https://app.loops.so/api/newsletter-form/[YOUR-ENDPOINT]
+  promise: Get occasional group updates in your mailbox
+
+# ---------------------------------------------------------------------------
+# Recognition — the hairline rule under the hero. First entry is highlighted.
+# ---------------------------------------------------------------------------
+recognition:
+  - NSF CAREER 2025
+  - LANL ISTI Distinguished Faculty Scholar 2024
+  - MIT DMSE Visiting Scholar 2023
+  - Associate Editor, Metall. Mater. Trans. A
+  - TMS AIM-2026 Programming Chair 

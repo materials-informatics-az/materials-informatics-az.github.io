@@ -1,0 +1,25 @@
+# ---------------------------------------------------------------------------
+# Courses. `cadence` is whatever you want to say about when it runs.
+# ---------------------------------------------------------------------------
+
+intro: >-
+  Courses at the University of Arizona, across materials science and applied
+  mathematics.
+
+courses:
+  - name: Physics-informed machine learning
+    level: Graduate
+    cadence: every Fall
+    description: "[One or two lines on the course.]"
+  - name: Kinetics of materials
+    level: Graduate
+    cadence: every Spring
+    description: "[One or two lines.]"
+  - name: Thermodynamics of materials
+    level: Undergraduate
+    cadence: Spring 2023
+    description: "[One or two lines.]"
+  - name: MSE Seminar
+    level: Graduate
+    cadence: Fall 2024
+    description: "[One or two lines.]"

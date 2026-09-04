@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# The CV page. Each section renders as a heading plus rows; drop a section by
+# deleting it, or hide the whole page with features.cv in site.yml.
+#
+# Values in [BRACKETS] are placeholders — fill or delete them.
+# ---------------------------------------------------------------------------
+
+headline: Marat I. Latypov
+subhead: >-
+  Assistant Professor, Materials Science & Engineering, and Applied Mathematics (GIDP),
+  University of Arizona
+pdf: # static/latypov-cv.pdf — set this and a "Download PDF" link appears
+
+sections:
+  - title: Appointments
+    rows:
+      - when: 2021–
+        what: Assistant Professor, Materials Science & Engineering
+        where: University of Arizona
+      - when: 2021–
+        what: Assistant Professor, Applied Mathematics (GIDP)
+        where: University of Arizona
+      - when: "[YEARS]"
+        what: "[Previous position]"
+        where: "[Institution]"
+
+  - title: Education
+    rows:
+      - when: "[YEAR]"
+        what: "[Ph.D. in ...]"
+        where: "[Institution]"
+      - when: "[YEAR]"
+        what: "[M.S. in ...]"
+        where: "[Institution]"
+      - when: "[YEAR]"
+        what: "[B.S. in ...]"
+        where: "[Institution]"
+
+  - title: Honours
+    rows:
+      - when: 2025–2030
+        what: NSF CAREER Award
+      - when: 2024
+        what: LANL ISTI Distinguished Faculty Scholar
+      - when: 2023
+        what: MIT DMSE Visiting Scholar
+
+  - title: Service
+    rows:
+      - when: 2019–
+        what: Associate Editor, Metallurgical and Materials Transactions A
+      - when: 2026
+        what: Programming Chair, AIM2026
+      - when: "[YEARS]"
+        what: "[Committee, panel or review service]"
+
+  - title: Teaching
+    rows:
+      - when: every Fall
+        what: Physics-informed machine learning
+        where: graduate
+      - when: every Spring
+        what: Kinetics of materials
+        where: graduate

@@ -1,0 +1,35 @@
+{% extends "shell.html" %}
+{% block title %}CV — {{ site.title }}{% endblock %}
+{% block description %}{{ cv.subhead }}{% endblock %}
+
+{% block content %}
+
+<div class="wrap page-head" style="padding-bottom: 26px">
+  <div class="eyebrow" style="margin-bottom: 14px">Curriculum vitae</div>
+  <h1>{{ cv.headline }}</h1>
+  <p class="lede">{{ cv.subhead }}</p>
+  {% if cv.get('pdf') %}
+  <a class="btn btn-ghost" href="{{ cv.pdf }}" style="margin-top: 22px">Download PDF</a>
+  {% endif %}
+</div>
+
+<div class="wrap" style="padding-bottom: 46px">
+  {% for section in cv.sections %}
+  <div class="cv-section">
+    <h2>{{ section.title }}</h2>
+    <div>
+      {% for row in section.rows %}
+      <div class="cv-row">
+        <span class="when">{{ row.when }}</span>
+        <div>
+          <div class="what">{{ row.what }}</div>
+          {% if row.get('where') %}<p class="where">{{ row.where }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

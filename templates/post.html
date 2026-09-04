@@ -1,0 +1,26 @@
+{% extends "shell.html" %}
+{% block title %}{{ post.title }} — {{ site.title }}{% endblock %}
+{% block description %}{{ post.description }}{% endblock %}
+
+{% block content %}
+
+<div class="wrap" style="padding-top: 46px; padding-bottom: 50px">
+  <a href="{{ asset_prefix }}studies.html" class="mono" style="font-size: 12px">&larr; Studies</a>
+
+  <article class="post" style="margin-top: 22px">
+    <div class="eyebrow" style="margin-bottom: 12px">{{ post.display_date }}</div>
+    <h1>{{ post.title }}</h1>
+    {% if post.description %}
+    <p class="lede" style="margin-top: 16px">{{ post.description }}</p>
+    {% endif %}
+    {% if post.authors %}
+    <p class="post-meta" style="margin-top: 14px">{{ post.authors }}</p>
+    {% endif %}
+
+    <div class="rule" style="margin: 32px 0"></div>
+
+    <div class="post-body">{{ post.html | safe }}</div>
+  </article>
+</div>
+
+{% endblock %}

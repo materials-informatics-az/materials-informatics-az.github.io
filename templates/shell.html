@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{{ site.title }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}" />
+    {% set page_title = self.title() %}
+    {% set page_desc = self.description() %}
+    {% if canonical %}<link rel="canonical" href="{{ canonical }}" />{% endif %}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:description" content="{{ page_desc }}" />
+    {% if og_image %}<meta property="og:image" content="{{ og_image }}" />{% endif %}
+    {% if canonical %}<meta property="og:url" content="{{ canonical }}" />{% endif %}
+    <meta name="twitter:card" content="{{ 'summary_large_image' if og_image else 'summary' }}" />
+    {% if features.studies %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ asset_prefix }}feed.xml" />
+    {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    {# The wordmark, drawn small enough to inline: a lime square inside a blue
+       frame. An SVG favicon scales to every tab size and needs no PNG set. #}
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23202428'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' fill='none' stroke='%23008bff' stroke-width='3'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23e3ff30'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="{{ asset_prefix }}static/style.css" />
+    {# Analytics. Whatever is set in site.yml is the only third-party script the
+       page loads besides Google Fonts; set neither and there is none at all. #}
+    {% if analytics.get('goatcounter') %}
+    <script
+      data-goatcounter="https://{{ analytics.goatcounter }}.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+    {% endif %}
+    {% if analytics.get('google') %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics.google }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{{ analytics.google }}");
+    </script>
+    {% endif %}
+  </head>
+  <body>
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="{{ asset_prefix }}index.html">
+          <span class="wordmark-glyph"><span></span></span>
+          <span class="wordmark-text">{{ site.title }}</span>
+        </a>
+        <nav class="site-nav">
+          {% for item in nav %}
+          <a href="{{ asset_prefix }}{{ item.href }}"{% if item.href == page_href %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        {# Any of these three may be blank or absent; `select` drops the empty
+           ones so the separators never end up doubled or dangling. #}
+        <p>{{ [site.get('department'), site.get('institution'), site.get('location')] | select | join(' · ') }}</p>
+        <div class="footer-links">
+          {% for item in socials %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
+          {% for item in footer_nav %}<a href="{{ asset_prefix }}{{ item.href }}">{{ item.label }}</a>{% endfor %}
+        </div>
+      </div>
+    </footer>
+    <script src="{{ asset_prefix }}static/app.js" defer></script>
+  </body>
+</html>

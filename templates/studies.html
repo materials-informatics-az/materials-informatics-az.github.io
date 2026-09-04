@@ -1,0 +1,29 @@
+{% extends "shell.html" %}
+{% block title %}Studies — {{ site.title }}{% endblock %}
+{% block description %}Longer write-ups of the group's published work.{% endblock %}
+
+{% block content %}
+
+<div class="wrap page-head" style="padding-bottom: 26px">
+  <div class="eyebrow" style="margin-bottom: 14px">Studies</div>
+  <h1>Longer write-ups</h1>
+  <p class="lede">
+    What a paper was actually about, in plainer words than the paper allows.
+    <a href="feed.xml">RSS</a>
+  </p>
+</div>
+
+<div class="wrap" style="padding-bottom: 46px">
+  {% for p in posts %}
+  <div class="post-list-row">
+    <span class="when">{{ p.display_date }}</span>
+    <div>
+      <h2><a href="{{ p.href }}">{{ p.title }}</a></h2>
+      {% if p.description %}<p class="desc">{{ p.description }}</p>{% endif %}
+      {% if p.authors %}<p class="post-meta">{{ p.authors }}</p>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

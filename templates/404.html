@@ -1,0 +1,27 @@
+{% extends "shell.html" %}
+{% block title %}Page not found — {{ site.title }}{% endblock %}
+{% block description %}That page does not exist.{% endblock %}
+
+{# GitHub Pages serves this file for any address that does not resolve, at any
+   depth — /nope, /old/deep/link, anything. Relative links would therefore point
+   somewhere different depending on the URL the reader arrived at, so every link
+   on this page, and `asset_prefix` in the shell, is root-relative. #}
+
+{% block content %}
+
+<div class="wrap page-head" style="padding-bottom: 90px">
+  <div class="eyebrow" style="margin-bottom: 14px">404</div>
+  <h1>That page does not exist</h1>
+  <p class="lede" style="margin-top: 18px; max-width: 46em">
+    The address may be from an older version of this site, or it may simply be a typo.
+    Nothing here has been deleted on purpose.
+  </p>
+  <div style="display: flex; gap: 22px; flex-wrap: wrap; padding-top: 26px">
+    <a href="/">Home</a>
+    {% for item in nav %}
+    <a href="/{{ item.href }}">{{ item.label }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

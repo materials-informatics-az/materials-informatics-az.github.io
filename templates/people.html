@@ -1,0 +1,133 @@
+{% extends "shell.html" %}
+{% block title %}People — {{ site.title }}{% endblock %}
+{% block description %}A small group, on purpose — everyone owns a question end to end.{% endblock %}
+
+{% macro star(size) -%}
+<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="var(--accent-hi)" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.5 9 9"></polygon></svg>
+{%- endmacro %}
+
+{% block content %}
+
+<div class="wrap page-head">
+  <div class="eyebrow" style="margin-bottom: 14px">People</div>
+  <h1>Our group</h1>
+</div>
+
+{# --- principal investigator -------------------------------------------- #}
+<div class="wrap" style="padding-bottom: 44px">
+  <div class="pi-card">
+    <img src="{{ pi.photo }}" alt="{{ pi.name }}" width="210" height="265" />
+    <div>
+      <div class="head">
+        <h2>{{ pi.name }}</h2>
+        <span class="role" style="--role-bg: rgba(0, 139, 255, 0.14); color: var(--accent-1)">{{ pi.role }}</span>
+      </div>
+      <p class="body">{{ pi.bio }}</p>
+      {# First entry leads, exactly as the landing page's recognition line does. #}
+      <p class="mono pi-honours">
+        {% for h in pi.honours %}
+        <span{% if loop.first %} class="lead"{% endif %}>{{ h }}</span>
+        {% if not loop.last %}<span class="sep">&middot;</span>{% endif %}
+        {% endfor %}
+      </p>
+      <div style="display: flex; gap: 18px; padding-top: 14px; flex-wrap: wrap">
+        {% for l in pi.links %}{% if l.unset %}<span class="person-link is-unset">{{ l.label }}</span>{% else %}<a class="person-link" href="{{ l.href }}">{{ l.label }}</a>{% endif %}{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# --- roster ------------------------------------------------------------ #}
+<div class="wrap" style="padding-bottom: 46px">
+  <div class="section-head" style="margin-bottom: 20px">
+    <h2>Current Members</h2>
+    <span class="mono" style="font-size: 11.5px; color: var(--text-faint)">{{ roster_summary }}</span>
+  </div>
+
+  <div class="roster">
+    {% for m in members %}
+    <article class="person">
+      <div class="person-photo">
+        <img src="{{ m.photo }}" alt="{{ m.name }}" width="218" height="248" loading="lazy" />
+        {% if fellowship_badges and m.get('fellowship') %}
+        <span class="badge-fellow" title="{{ m.fellowship }}{% if m.get('fellowship_year') %}, {{ m.fellowship_year }}{% endif %}">{{ star(10) }}{{ m.fellowship }}</span>
+        {% endif %}
+      </div>
+      <div>
+        {# Right-aligned, to balance the badge pinned to the left of the photo
+           above it. The tint travels as a custom property rather than an inline
+           background so `.role` keeps a single background rule. #}
+        <div class="tags">
+          <span class="role" style="--role-bg: {{ accent_bg[m.role_tone] }}; color: var(--{{ 'accent-3-text' if m.role_tone == 'accent-3' else m.role_tone }})">{{ m.role }}</span>
+        </div>
+        <h3>{{ m.name }}</h3>
+        <p class="topic">{{ m.topic }}</p>
+      </div>
+      <div class="links">
+        {% for l in m.links %}{% if l.unset %}<span class="person-link is-unset">{{ l.label }}</span>{% else %}<a class="person-link" href="{{ l.href }}">{{ l.label }}</a>{% endif %}{% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+
+    {% if join.get('enabled', True) %}
+    <article class="person person-join">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-hi)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+      <h3 style="margin-top: 0">{{ join.title }}</h3>
+      <p class="topic">{{ join.text }}</p>
+      <a href="{{ join.href }}" style="font-size: 13px">{{ join.cta }} &rarr;</a>
+    </article>
+    {% endif %}
+  </div>
+</div>
+
+{# --- fellowships -------------------------------------------------------- #}
+{% if fellowships %}
+<div class="fellowships">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 12px">Honors and Awards</div>
+      <h2>Our students win</h2>
+      {% if fellowships_intro %}
+      <p class="body" style="margin-top: 12px; font-size: 13.5px">{{ fellowships_intro }}</p>
+      {% endif %}
+    </div>
+    <div>
+      {% for a in fellowships %}
+      <div class="award">
+        <span class="award-star">{{ star(16) }}</span>
+        <div>
+          <div class="name">{{ a.name }}</div>
+          <div class="holders">{{ a.holders }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# --- group photo -------------------------------------------------------- #}
+<div class="wrap" style="padding-top: 46px; padding-bottom: 46px">
+  {% if group_photo.get('src') %}
+  <div class="figure-frame"><img src="{{ group_photo.src }}" alt="The group" loading="lazy" /></div>
+  {% else %}
+  <div class="group-photo">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#4a5158" stroke-width="1.3" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="1"></rect><circle cx="8.5" cy="10.5" r="2"></circle><path d="M3 17l5-4 4 3 4-5 5 5"></path></svg>
+    <span class="mono" style="font-size: 12px; color: var(--text-faint)">{{ group_photo.placeholder }}</span>
+  </div>
+  {% endif %}
+</div>
+
+{# --- alumni ------------------------------------------------------------- #}
+<div class="alumni">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom: 12px">Alumni</div>
+    <p class="alumni-list">
+      {% for a in alumni %}
+      <span class="name">{{ a.name }}</span> <span class="note">{{ a.note }}</span>{% if not loop.last %} &nbsp;&middot;&nbsp; {% endif %}
+      {% endfor %}
+    </p>
+  </div>
+</div>
+
+{% endblock %}

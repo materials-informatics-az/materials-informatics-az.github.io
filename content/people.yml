@@ -1,0 +1,145 @@
+# ---------------------------------------------------------------------------
+# The group. Adding, removing or promoting someone is an edit to THIS FILE
+# and nothing else — no new page, no template change.
+#
+# role      : the chip on the card. Keep the vocabulary short and consistent.
+# role_tone : accent-1 (blue) | accent-2 (pink) | accent-3 (purple)
+# topic     : ONE line. This is the field that makes a small roster read as full.
+# fellowship: renders the star badge on the card. The band lower down is a
+#             separate hand-written list — keep the two in step yourself.
+# links     : label -> address. `email` is turned into a mailto: automatically.
+#             A value left in [brackets] renders as muted text, not a dead link,
+#             so an unfilled field is visible rather than broken.
+#
+# ---------------------------------------------------------------------------
+
+pi:
+  name: Marat Latypov
+  role: Principal investigator
+  photo: static/img/people/marat.jpg
+  bio: >-
+    Assistant Professor of Materials Science & Engineering and of Applied Mathematics
+    (GIDP), University of Arizona. Works on the mesoscale informatics of structural alloys with a focus on microstructure engineering of circular materials.
+  honours: NSF CAREER 2025 · Associate Editor, Metall. Mater. Trans. A · TMS AIM-2026 Programming Chair
+  links:
+    email: latmarat@arizona.edu
+    scholar: "https://scholar.google.com/citations?user=We5aJywAAAAJ"
+    cv: cv.html
+
+members:
+  - name: Seojun Hong, Ph.D.
+    role: Postdoctoral researcher
+    role_tone: accent-1
+    photo: static/img/people/seojun.jpg
+    topic: Crystal plasticity and mechanics across length scales
+    links:
+      email: "sjhong@arizona.edu"
+      scholar: "https://scholar.google.com/citations?user=M9oNc5IAAAAJ"
+
+  - name: Guangyu Hu
+    role: Doctoral researcher
+    role_tone: accent-2
+    photo: static/img/people/guangyu.jpg
+    topic: Graph neural networks for modeling structural alloys.
+    links:
+      email: "hug@arizona.edu" 
+      scholar: "https://scholar.google.com/citations?user=Zaw4kyIAAAAJ"
+
+  - name: Sheila Whitman
+    role: Doctoral researcher
+    role_tone: accent-2
+    photo: static/img/people/sheila.jpg
+    topic: Applied math and materials science for sustainable structural alloys.
+    fellowship: "NSF GRFP"
+    fellowship_year: "2023"
+    links:
+      email: "sheilaw@arizona.edu"
+      scholar: "https://scholar.google.com/citations?user=VyFOItkAAAAJ"
+
+  - name: I-Tzu Huang
+    role: Doctoral researcher
+    role_tone: accent-2
+    photo: static/img/people/itzu.jpg
+    topic: Physics-informed machine learning across length scales.
+    fellowship: "NSF GRFP"
+    fellowship_year: "2026"
+    links:
+      email: "itzuhuang@arizona.edu" 
+      scholar: "https://scholar.google.com/citations?user=yrP37rIAAAAJ"
+ 
+  - name: Zhuocheng (Leo) Huang
+    role: Doctoral researcher
+    role_tone: accent-2
+    photo: static/img/people/leo.jpg
+    topic: Multiscale modeling and machine learning of structural alloys.
+    fellowship: "Herbold Fellowship"
+    fellowship_year: "2025"
+    links:
+      email: "zhuochenghuang@arizona.edu"
+
+  - name: Jordan Casto
+    role: Undergraduate researcher
+    role_tone: accent-3
+    photo: static/img/people/jordan.jpg
+    topic: Experimental characterization of recycled aluminium alloys.
+    links:
+      email: "jordanpcasto@arizona.edu"
+
+# ---------------------------------------------------------------------------
+# The fellowships band. Written by hand, in the order you want it read.
+# ---------------------------------------------------------------------------
+
+fellowships:
+  # The star badge pinned to each person's photo. That badge is still driven by
+  # `fellowship:` on the member above — this switch only turns the badges off.
+  badges: true
+
+  # Each entry is a name and its holders.
+  #   name    — the award, exactly as it should read
+  #   holders — a LIST of names, joined with ' · ' on the page, or a single
+  #             string when the line is a sentence rather than a roster
+  awards:
+    - name: NSF GRFP
+      holders:
+        - I-Tzu (2026)
+        - Sheila  (2023)
+    - name: College and Program Awards
+      holders:
+        - "Sheila: Al Scott Prize & Lecture (2026)"
+        - "Leo: Herbold Fellowship (2025)"
+        - "Thomas: Sulzer Mines Scholarship (2024)"
+    - name: Travel Awards
+      holders:
+        - Sheila (Herbert E. Carter, CVPR)
+        - Thomas (CODAS-HEP)
+
+  # Optional. Sits under the heading in the left column; omit it and the column
+  # is just the heading.
+  intro:
+
+# ---------------------------------------------------------------------------
+
+join:
+  # Set to false when you are not recruiting — the tile disappears from the
+  # roster grid and nothing else moves.
+  enabled: true
+  title: Join us
+  text: >-
+    We are accepting applications for postdoc position on non-destructive evaluation and characterization of alloys. If you have a relevant hands-on experience demonstrated with publications, please email your CV and brief statement of interest with "NDE postdoc" in subject line.  
+  href: "mailto:materials.informatics.lab@gmail.com"
+  cta: Apply by email
+
+group_photo:
+  # `src` is the photo. Displayed at ~1072 px, so 1600 px is the retina width —
+  # see the image table in NOTES.md. `placeholder` is the caption shown in the
+  # empty frame when `src` is unset; it is text, never a path.
+  src: static/img/group-f2025.jpg
+  placeholder: "[Group photo]"
+
+alumni:
+  - { name: Ramya Ramachandran, note: "MSc (2026)" }
+  - { name: Thomas Tawiah Baah, note: "MSc (2025)" }
+  - { name: Samiah Hassan, note: "MSc (2025)" }
+  - { name: Jiayang Wang, note: "Postdoc (2024-2026)" }
+  
+  
