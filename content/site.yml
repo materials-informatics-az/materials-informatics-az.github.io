@@ -5,6 +5,12 @@
 
 title: Materials Informatics Lab
 tagline: Understanding the mesoscale of imperfect materials that carry the load
+# One word or phrase of the tagline, picked out in the group's pink on the
+# landing page. It must appear in `tagline` verbatim; if it does not, the
+# headline simply renders plain. Deliberately a separate key rather than markup
+# inside `tagline` — the tagline is also <meta name="description"> and the feed
+# description, and neither may carry HTML.
+tagline_accent: mesoscale
 institution: University of Arizona
 # Optional. Blank it or delete the line and it simply disappears from the footer
 # — the separators close up rather than leaving a stray dot.

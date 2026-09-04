@@ -7,7 +7,13 @@
 <div class="wrap hero">
   <div class="hero-copy">
     <div class="eyebrow">{{ site.institution }} &middot; since {{ site.founded }}</div>
-    <h1>{{ site.tagline }}</h1>
+    {# `tagline_accent` in site.yml names one word of the tagline to accent. The
+       split keeps the yml value plain text, which it has to be — the same string
+       is the meta description and the feed description. An accent word that is
+       not in the tagline leaves the headline untouched rather than erroring. #}
+    {% set accent_word = site.get('tagline_accent') %}
+    {% set parts = site.tagline.split(accent_word, 1) if accent_word else [site.tagline] %}
+    <h1>{{ parts[0] }}{% if parts | length == 2 %}<span class="accent">{{ accent_word }}</span>{{ parts[1] }}{% endif %}</h1>
     <p class="lede">
       Materials informatics has mastered atomistic discovery but an alloy is not its unit
       cell. Strength, fatigue, and damage are decided at the mesoscale of grains, phases, and

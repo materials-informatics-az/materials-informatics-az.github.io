@@ -375,6 +375,27 @@ input:focus-visible {
   line-height: 1.07;
 }
 
+/* The hero eyebrow is a section label like "Featured Research" and "Featured
+   Papers" further down the page, so it is set to match them exactly: the
+   .eyebrow base already shares the mono face, 0.16em tracking, uppercase and
+   colour, and these two lines close the remaining 11px/400 vs 13px/500 gap.
+   Scoped to .hero because elsewhere .eyebrow is a page label, not a section
+   heading, and 11px is right for it there. */
+.hero .eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* The one word of the tagline that says what the group works on. --accent-2
+   measures 4.13:1 on --bg: short of the 4.5 body text needs, but past the 3:1
+   that applies at this size, and the headline never drops below 34px. Pink
+   rather than --accent-1, because a blue word inside a headline invites a
+   click; rather than --accent-hi, because the recognition rule 50px below
+   already spends lime on its lead item. Measured, not assumed. */
+.hero h1 .accent {
+  color: var(--accent-2);
+}
+
 .hero-actions {
   display: flex;
   gap: 12px;
