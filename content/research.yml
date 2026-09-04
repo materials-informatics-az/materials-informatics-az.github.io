@@ -17,10 +17,10 @@
 
 pillars:
   - id: plasticity
-    label: Plasticity
+    label: Crystal Plasticity
     number: "01"
     accent: accent-1
-    title: Plasticity Across Populations
+    title: Fatigue across Populations
     strap: grain-level physics, component-level statistics
     summary: >-
       Fatigue indicator parameters that generalize to grain populations far beyond
@@ -71,14 +71,14 @@ pillars:
       - wang2026latticegenomea
 
   - id: constraint
-    label: Constraint
+    label: Circularity
     number: "03"
     accent: accent-3
-    title: Microstructure Control Under Compositional Constraint
+    title: Microstructure Control under Compositional Constraint
     card_title: Circular Materials 
     strap: when composition is fixed, processing becomes the design variable
     summary: >-
-      Achieving wrought alloy performance in recycled aluminum alloys.
+      Understanding microstructure-dependent damage in recycled aluminum alloys.
     ref: NSF CAREER 2025–2030
     tools: [interactive-calphad, interactive-coherency]
     body:

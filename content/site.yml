@@ -25,7 +25,7 @@ url: https://materials-informatics-az.github.io
 analytics:
   # GoatCounter: sign up at goatcounter.com, then put your site CODE here — just
   # the code, so "mylab", not "https://mylab.goatcounter.com".
-  goatcounter:
+  goatcounter: materials-informatics-az
 
   # Google Analytics 4 measurement ID, carried over from the al-folio site.
   # Blank this when you switch; running both double-counts every visit and puts
