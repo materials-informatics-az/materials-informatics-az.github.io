@@ -1,0 +1,176 @@
+{% extends "shell.html" %}
+{% block title %}{{ site.title }} — {{ site.institution }}{% endblock %}
+
+{% block content %}
+
+{# --- hero ------------------------------------------------------------- #}
+<div class="wrap hero">
+  <div class="hero-copy">
+    <div class="eyebrow">{{ site.institution }} &middot; since {{ site.founded }}</div>
+    <h1>{{ site.tagline }}</h1>
+    <p class="lede">
+      Materials informatics has mastered atomistic discovery, but an alloy is not its unit
+      cell. Strength, fatigue, and damage are decided at the mesoscale of grains, phases, and
+      defects. We measure, model and design the mesoscale, especially when
+      composition is not free to choose.
+    </p>
+    {% if features.research or features.tools %}
+    <div class="hero-actions">
+      {% if features.research %}<a class="btn btn-primary" href="research.html">Our research</a>{% endif %}
+      {% if features.tools %}
+      <a class="btn btn-ghost" href="tools.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-hi)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        Try the tools
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+  <div>
+    <div class="figure-frame">
+      {# width/height come from the file itself, so a re-crop cannot desync them
+         and leave the browser reserving the wrong box. #}
+      <img
+        src="{{ hero_figure.src }}"
+        alt="{{ hero_figure.alt }}"
+        {% if hero_figure.get('width') %}width="{{ hero_figure.width }}" height="{{ hero_figure.height }}"{% endif %}
+      />
+    </div>
+    <p class="figure-caption"><span class="label">Fig.</span> {{ hero_figure.caption }}</p>
+  </div>
+</div>
+
+{# --- recognition ------------------------------------------------------ #}
+<div class="recognition">
+  <div class="wrap">
+    {% for item in site.recognition %}
+    <span{% if loop.first %} class="lead"{% endif %}>{{ item }}</span>
+    {% if not loop.last %}<span class="sep">/</span>{% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{# --- pillars ---------------------------------------------------------- #}
+<div class="wrap" style="padding-top: 60px; padding-bottom: 62px">
+  <div class="section-head">
+    <h2>Featured research</h2>
+    {% if features.research %}<a href="research.html">All research &rarr;</a>{% endif %}
+  </div>
+  <div class="pillars">
+    {% for p in pillars %}
+    {% set tag = 'a' if features.research else 'div' %}
+    {% set accent = 'accent-3-text' if p.accent == 'accent-3' else p.accent %}
+    <{{ tag }} class="pillar"{% if features.research %} href="research.html#{{ p.id }}"{% endif %} style="--pillar-accent: var(--{{ accent }})">
+      <span class="ghost" aria-hidden="true">{{ p.number }}</span>
+      <span class="label">{{ p.get('label') or p.id }}</span>
+      <h3>{{ p.get('card_title') or p.title }}</h3>
+      <p class="body">{{ p.summary }}</p>
+      <p class="ref">
+        {{ p.ref }}{% if p.get('tool_objs') and features.tools %} &middot; <span class="live">live tool</span>{% endif %}
+      </p>
+    </{{ tag }}>
+    {% endfor %}
+  </div>
+</div>
+
+{# --- featured tool ----------------------------------------------------- #}
+{% if featured_tool %}
+<div class="tools-band">
+  <div class="wrap">
+    <div class="featured">
+      <div class="eyebrow" style="margin-bottom: 12px">Featured tool</div>
+      <a class="app-frame" href="{{ featured_tool.url }}">
+        <div class="app-chrome">
+          <span class="dot" style="background: var(--accent-2)"></span>
+          <span class="dot" style="background: var(--accent-hi)"></span>
+          <span class="dot" style="background: var(--accent-1)"></span>
+          <span class="label">{{ featured_tool.id }} &middot; runs in your browser</span>
+        </div>
+        <img src="{{ featured_tool.preview }}" alt="{{ featured_tool.name }}" loading="lazy" width="1000" height="526" />
+      </a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 30px">
+      <h2>Our science in your browser</h2>
+      <p class="lede">
+        Interact with our major developments in the browser. 
+      </p>
+      <div class="tool-list">
+        {% for t in landing_tools %}
+        <a class="tool-row" href="{{ t.url }}">
+          <span>
+            <span class="name">{{ t.name }}</span>
+            <span class="desc" style="display: block">{{ t.blurb }}</span>
+          </span>
+          {% if t.get('featured') %}
+          <span class="chip chip-live">Featured</span>
+          {% else %}
+          <span style="color: var(--text-faint)">&rarr;</span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      <a href="tools.html" style="font-size: 13px">
+        {% if tool_total > landing_tools | length %}All {{ tool_total }} tools, with their papers{% else %}Every tool, with its paper{% endif %} &rarr;
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# --- selected papers + news -------------------------------------------- #}
+<div class="wrap two-col">
+  <div>
+    <div class="section-head" style="margin-bottom: 18px">
+      <h2>Selected papers</h2>
+      <a href="publications.html">All publications &rarr;</a>
+    </div>
+    {% for p in selected_papers %}
+    <div class="paper-row">
+      <div class="year">{{ p.year }}</div>
+      <div>
+        <div class="title">
+          {% if p.href %}<a href="{{ p.href }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+          {% if p.get('tool_url') %}<a class="chip chip-live" href="{{ p.tool_url }}" style="margin-left: 6px">Interactive</a>{% endif %}
+        </div>
+        {% if p.get('venue') %}<p class="venue">{{ p.venue }}</p>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div>
+    <div class="section-head" style="margin-bottom: 18px">
+      <h2>News</h2>
+      <a href="news.html">All news &rarr;</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      {% for n in news[:landing_news_count] %}
+      <div class="news-item{% if loop.first %} is-recent{% endif %}">
+        <div class="date">{{ n.display_date }}</div>
+        <p class="text">{{ n.html | safe }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{# --- newsletter -------------------------------------------------------- #}
+{% if site.newsletter.get('enabled', True) %}
+<div class="newsletter">
+  <div class="wrap">
+    <div>
+      <h2>Stay in touch</h2>
+      <p class="body">{{ site.newsletter.promise }}</p>
+    </div>
+    <div>
+      <form data-newsletter action="{{ site.newsletter.get('endpoint') or '' }}" method="post">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="your@email.edu" />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}

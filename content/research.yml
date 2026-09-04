@@ -1,0 +1,105 @@
+# ---------------------------------------------------------------------------
+# The three research pillars — the single source for both the landing page
+# cards and the research page sections.
+#
+# accent : accent-1 (blue) | accent-2 (pink) | accent-3 (purple)
+# card_title : optional short form used on the landing tiles. The full `title`
+#          is what the research page section uses.
+# label  : one word above the title on the landing tile. Defaults to the id.
+# tools  : ids from tools.yml. Omit for a pillar with no app yet — the section
+#          then ends with its papers, which is a deliberate layout, not a gap.
+# body   : one string per paragraph.
+# papers : citation KEYS from content/papers.bib — never retyped metadata.
+#          Title, authors, venue and the link are read from the bib, so a
+#          correction there fixes every page at once. A key that is not in the
+#          bib is skipped, and the build says so.
+# ---------------------------------------------------------------------------
+
+pillars:
+  - id: plasticity
+    label: Plasticity
+    number: "01"
+    accent: accent-1
+    title: Plasticity Across Populations
+    strap: grain-level physics, component-level statistics
+    summary: >-
+      Fatigue indicator parameters that generalize to grain populations far beyond
+      their training set.
+    ref: FIP-GNN · Scripta Materialia 2025
+    body:
+      - >-
+        "[RESEARCH-STUFF.]"
+      - >-
+        "[RESEARCH-STUFF.]"
+    figure:
+      src: static/img/hero-slipbands.jpg
+      width: 1000
+      height: 900
+      alt: Stress and rotation fields adjacent to slip bands
+      caption: Stress and rotation fields adjacent to slip bands. EML 2021 / Scripta 2021.
+    papers:
+      - sim2025fipgnngrapha
+      - latypovModelingLatticeRotation2021
+      - hestrofferDevelopmentGrainscaleSlip2022
+
+  - id: differentiable
+    label: Characterization
+    number: "02"
+    accent: accent-2
+    title: Differentiable Characterization
+    strap: microscopy as continuous, differentiable fields
+    summary: >-
+      Microscopy as continuous differentiable fields beyond the measurement grid. 
+    ref: Neural EBSD · arXiv 2026
+    tools: [neural-ebsd]
+    body:
+      - >-
+        "[RESEARCH-STUFF.]"
+      - >-
+        "[RESEARCH-STUFF.]"
+      - "[RESEARCH-STUFF.]"
+    figure:
+      src: static/img/fig-neural-ebsd.jpg
+      width: 1000
+      height: 526
+      alt: Boundary field recovered as an analytical derivative
+      caption: >-
+        Boundary field recovered as an analytical derivative of the fitted
+        representation.
+    papers:
+      - huang2026neuralelectron
+      - wang2026latticegenomea
+
+  - id: constraint
+    label: Constraint
+    number: "03"
+    accent: accent-3
+    title: Microstructure Control Under Compositional Constraint
+    card_title: Circular Materials 
+    strap: when composition is fixed, processing becomes the design variable
+    summary: >-
+      Achieving wrought alloy performance in recycled aluminum alloys.
+    ref: NSF CAREER 2025–2030
+    tools: [interactive-calphad, interactive-coherency]
+    body:
+      - >-
+        "[RESEARCH-STUFF.]"
+      - >-
+        "[RESEARCH-STUFF.]"
+      - "[RESEARCH-STUFF.]"
+    figure:
+      placeholder: "[Fe-bearing intermetallics]"
+    papers:
+      - hassan2026eutecticperitectic
+      - wang2026thermodynamicassessment
+      - pfeifferAluminumAlloyCompositions2022
+
+# The feature figure on the landing page hero.
+hero_figure:
+  src: static/img/hero-rotations.png
+  alt: Lattice rotation fields from a slip band
+  caption: >-
+    Lattice rotation fields from a slip band in a superalloy simulated with CPFEM.
+
+# Shown under the pillars on the research page.
+support: National Science Foundation · Air Force Office of Scientific Research · Grantham Foundation

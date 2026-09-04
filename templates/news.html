@@ -1,0 +1,21 @@
+{% extends "shell.html" %}
+{% block title %}News — {{ site.title }}{% endblock %}
+{% block description %}What the group has been doing.{% endblock %}
+
+{% block content %}
+
+<div class="wrap page-head" style="padding-bottom: 26px">
+  <div class="eyebrow" style="margin-bottom: 14px">News</div>
+  <h1>What we have been doing</h1>
+</div>
+
+<div class="wrap" style="padding-bottom: 46px">
+  {% for n in news %}
+  <div class="news-row">
+    <span class="when">{{ n.display_date }}</span>
+    <p class="what">{{ n.html | safe }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "shell.html" %}
+{% block title %}Publications — {{ site.title }}{% endblock %}
+{% block description %}The group's publication record, newest first.{% endblock %}
+
+{% block content %}
+
+<div class="wrap page-head" style="padding-bottom: 26px">
+  <div class="eyebrow" style="margin-bottom: 14px">Publications</div>
+  <h1>The record</h1>
+  <p class="lede">
+    Our published papers and manuscripts, see also <a href="https://scholar.google.com/citations?user=We5aJywAAAAJ">Google Scholar</a>
+    {% if features.tools %}Papers that ship with a tool you can open carry a chip.{% endif %}
+  </p>
+</div>
+
+<div class="wrap" style="padding-bottom: 20px">
+  <div class="section-head" style="margin-bottom: 0">
+    <h2>By year</h2>
+    <span class="pub-count">{{ paper_count }} entries</span>
+  </div>
+</div>
+
+<div class="wrap" style="padding-bottom: 40px">
+  {% for group in papers_by_year %}
+  <div class="year-group">
+    <div class="year-label">{{ group.year }}</div>
+    <div>
+      {% for p in group.papers %}
+      <div class="pub">
+        <div class="title">
+          {% if p.href %}<a href="{{ p.href }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+          {% if p.get('tool_url') %}<a class="chip chip-live" href="{{ p.tool_url }}" style="margin-left: 6px">Interactive</a>{% endif %}
+        </div>
+        <p class="authors">{{ p.authors }}</p>
+        <div class="pub-meta">
+          {% if p.venue %}<span class="venue">{{ p.venue }}</span>{% endif %}
+          {% if p.bibtex %}
+          {# The BibTeX travels in the attribute, so copying needs no request
+             and works with the page open offline. #}
+          <button class="cite" type="button" data-bibtex="{{ p.bibtex }}" aria-label="Copy BibTeX for {{ p.title }}">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="1.5"></rect><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path></svg>
+            <span data-cite-label>cite</span>
+          </button>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

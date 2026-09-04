@@ -1,0 +1,26 @@
+{% extends "shell.html" %}
+{% block title %}Teaching — {{ site.title }}{% endblock %}
+{% block description %}{{ teaching.intro }}{% endblock %}
+
+{% block content %}
+
+<div class="wrap page-head" style="padding-bottom: 26px">
+  <div class="eyebrow" style="margin-bottom: 14px">Teaching</div>
+  <h1>Courses</h1>
+  <p class="lede">{{ teaching.intro }}</p>
+</div>
+
+<div class="wrap" style="padding-bottom: 46px">
+  {% for c in teaching.courses %}
+  <div class="course">
+    <span class="cadence">{{ c.cadence }}</span>
+    <div>
+      <div class="level">{{ c.level }}</div>
+      <h2>{{ c.name }}</h2>
+      {% if c.get('description') %}<p class="body" style="margin-top: 8px">{{ c.description }}</p>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

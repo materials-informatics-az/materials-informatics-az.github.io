@@ -1,0 +1,77 @@
+# Build the site with build.py and publish it to GitHub Pages.
+#
+# Repository settings -> Pages -> Source must be set to "GitHub Actions" for
+# this to take effect. Nothing here is Jekyll; Pages' built-in builder is not
+# involved.
+#
+# Paths in this file are relative to the REPOSITORY ROOT, which is where
+# build.py lives. GitHub only runs workflows found at <repo root>/.github/
+# workflows/ — a subdirectory is never scanned — so this file has to sit here.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "templates/**"
+      - "static/**"
+      - "build.py"
+      - "requirements.txt"
+      - ".github/workflows/deploy-site.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; a newer push waits rather than racing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # One build, checked. build.py prints link problems but still exits 0, so
+      # the grep is what stops a broken internal link from shipping.
+      - name: Build
+        run: |
+          python3 build.py | tee build.log
+          if grep -qE 'broken link|missing anchor' build.log; then
+            echo "::error::build reported broken internal links"
+            exit 1
+          fi
+          rm -f build.log
+
+      - uses: actions/configure-pages@v5
+
+      # build.py writes _publish/ and nothing else — the published file set is
+      # decided there, not restated here.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _publish
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,118 @@
+{% extends "shell.html" %}
+{% block title %}Tools — {{ site.title }}{% endblock %}
+{% block description %}{{ tools_intro }}{% endblock %}
+
+{% macro check(colour) -%}
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="{{ colour }}" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>
+{%- endmacro %}
+
+{% macro meta(key, value, href) -%}
+<div class="meta-row">
+  <span class="key">{{ key }}</span>
+  {% if value.unset %}
+  <span class="unset">{{ value.text }}</span>
+  {% elif href %}
+  <span><a href="{{ href }}">{{ value.text }}</a></span>
+  {% else %}
+  <span>{{ value.text }}</span>
+  {% endif %}
+</div>
+{%- endmacro %}
+
+{% block content %}
+
+<div class="wrap page-head page-head-split">
+  <div>
+    <div class="eyebrow" style="margin-bottom: 14px">Tools</div>
+    <h1>Every major result, as something you can open</h1>
+    <p class="lede">{{ tools_intro }}</p>
+  </div>
+  <div>
+    <p class="body" style="font-size: 13px">{{ tools_aside }}</p>
+  </div>
+</div>
+
+<div class="section-nav">
+  <div class="wrap">
+    <span class="label">ON THIS PAGE</span>
+    {% for t in tools %}
+    <a href="#{{ t.id }}" style="color: var(--{{ t.accent }})">{{ t.name }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+{% for t in tools %}
+<section class="wrap tool-section" id="{{ t.id }}" style="--tool-accent: var(--{{ t.accent }})">
+  <div class="tool-heading">
+    <span class="num">{{ "%02d" % loop.index }}</span>
+    <h2>{{ t.name }}</h2>
+    {% if t.get('pillar_title') %}
+    {% if features.research %}
+    <a class="chip" href="research.html#{{ t.pillar }}" style="background: {{ t.accent_bg }}; color: var(--{{ t.accent }})">{{ t.pillar_title }}</a>
+    {% else %}
+    <span class="chip" style="background: {{ t.accent_bg }}; color: var(--{{ t.accent }})">{{ t.pillar_title }}</span>
+    {% endif %}
+    {% endif %}
+  </div>
+  <p class="lede" style="max-width: 74ch; margin-bottom: 24px">{{ t.description }}</p>
+
+  {% if not t.url_unset %}
+  <div class="embed" data-embed-src="{{ t.url }}" data-embed-title="{{ t.name }}">
+    <div class="embed-bar">
+      <span style="display: flex; align-items: center; gap: 10px">
+        <span class="chip chip-live">Live</span>
+        <span class="name">{{ t.id }}</span>
+      </span>
+      <a class="out" href="{{ t.url }}">open full screen &nearr;</a>
+    </div>
+    <div class="embed-stage">
+      <button class="embed-poster" type="button" data-embed-load>
+        {% if t.get('preview') %}<img src="{{ t.preview }}" alt="" loading="lazy" />{% endif %}
+        <span class="embed-play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--bg)"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+        </span>
+        <span class="title">Load {{ t.name }}</span>
+        <span class="hint">Click to load — the app boots only when you ask for it</span>
+      </button>
+      <noscript><p class="body" style="padding: 20px"><a href="{{ t.url }}">Open {{ t.name }} &nearr;</a></p></noscript>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="tool-detail">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 12px">What you can do with it</div>
+      <div class="can-list">
+        {% for c in t.capabilities %}
+        <div class="can">{{ check('var(--' ~ t.accent ~ ')') }}<p class="body">{{ c }}</p></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      {{ meta('Paper', t.paper_label, t.paper_href) }}
+      {{ meta('Built by', t.built_by_label, none) }}
+      {{ meta('Source', t.repo_label, t.repo_href) }}
+      {% if not t.url_unset %}{{ meta('Hosted at', t.host_label, t.host_href) }}{% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<div class="cite-band">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 12px">Using these in your own work</div>
+      <p class="body" style="margin-bottom: 14px">
+        All three are open source and free to use, including in teaching. If one of them
+        does real work in a paper, cite the paper it belongs to — each is listed above.
+      </p>
+      <p class="body">Found a bug, or a database that misbehaves? Open an issue, or write to us.</p>
+    </div>
+    <div>
+      <div class="eyebrow" style="margin-bottom: 12px">Cite</div>
+      <pre class="bibtex">{{ tools[0].bibtex | trim }}</pre>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
